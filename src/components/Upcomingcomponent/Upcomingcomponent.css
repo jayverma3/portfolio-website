@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Boldonse&family=Cinzel:wght@400..900&family=Metal+Mania&family=Nabla:EDPT@104&family=Outfit&family=Quintessential&family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Boldonse&family=Bruno+Ace+SC&family=Cinzel:wght@400..900&family=Metal+Mania&family=Nabla:EDPT@104&family=Outfit&family=Quintessential&family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Boldonse&family=Bruno+Ace+SC&family=Cinzel:wght@400..900&family=Metal+Mania&family=Nabla:EDPT@104&family=Outfit&family=Quintessential&family=Righteous&family=Unbounded:wght@200..900&display=swap");
+.example-container {
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0);
+  width: 100%;
+  height: auto;
+  border: 0px solid #ddd;
+}
+.case-studies {
+  display: flex;
+  flex-direction: column; /* Stack cards vertically */
+  align-items: center; /* Center cards horizontally */
+  gap: 20px; /* Space between cards */
+  height: inherit; /* Full height for the container */
+  border: 0px solid rgba(255, 255, 255, 1); /* White border */
+  padding: 0px; /* Padding around the cards */
+}
+
+.cs-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Space out content and image */
+  padding: 100px;
+  background-color: rgba(0, 0, 0, 0); /* Semi-transparent background */
+  border: 0px solid rgba(235, 235, 235, 0.8);
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+}
+.cs-card {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.cs-card:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.cs-image {
+  position: relative;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid rgba(54, 87, 131, 0.61);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: radial-gradient(
+    circle,
+    rgba(0, 123, 255, 0.1) 0%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  transition: transform 0.5s ease, background-color 0.5s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cs-image:hover {
+  transform: scale(1.05) rotateX(10deg) rotateY(10deg);
+  background: radial-gradient(
+    circle,
+    rgba(12, 117, 255, 0.3) 0%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
+}
+
+.cs-image img {
+  width: 70%;
+  height: 70%;
+  object-fit: auto;
+  border-radius: 8px;
+  filter: brightness(0.8) contrast(1.2);
+  transition: filter 0.5s ease, transform 0.5s ease;
+}
+
+.cs-image:hover img {
+  filter: brightness(1) contrast(1);
+  transform: scale(1);
+}
+
+.cs-card.visible {
+  opacity: 5;
+  transform: translateY(0);
+}
+.cs-content {
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0);
+}
+.cs-title {
+  color: #fff;
+  font-family: "Righteous", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+  font-style: normal;
+  opacity: 0; /* Start invisible */
+  transform: translateY(50px); /* Start 50px below the normal position */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.cs-title.visible {
+  opacity: 1; /* Make visible */
+  transform: translateY(0); /* Move to its original position */
+}
+.cs-content-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  gap: 20px;
+  color: #fff;
+  font-family: "Righteous", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 1rem;
+  font-style: normal;
+  opacity: 0; /* Start invisible */
+  transform: translateY(50px); /* Start 50px below the normal position */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.cs-content-items.visible {
+  opacity: 1; /* Make visible */
+  transform: translateY(0); /* Move to its original position */
+}
+
+.desc-h3 {
+  font-size: 1.5rem;
+}
+
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%) scale(1);
+  pointer-events: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  z-index: 9999;
+  opacity: 0;
+}
+
+.custom-cursor.active {
+  opacity: 0.5;
+  transform: translate(-50%, -50%) scale(1.2);
+}
+/* Parent container for badges */
+.tech-badge-container {
+  display: flex;
+  gap: 12px; /* Space between badges */
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Padding around the badge container */
+  background-color: #000; /* Dark background */
+}
+
+/* Individual badge styling */
+.tech-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between logo and text */
+  padding: 6px 10px; /* Padding inside the badge */
+  background-color: #111; /* Slightly lighter black background */
+  border-radius: 16px; /* Rounded edges */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Thin translucent border */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0); /* Subtle shadow for depth */
+  transition: transform 0.2s ease, background-color 0.2s ease; /* Smooth hover effect */
+  width: fit-content; /* Ensures the width adjusts to content */
+}
+
+/* Hover effect for badges */
+.tech-badge:hover {
+  transform: translateY(-2px); /* Slight lift on hover */
+  background-color: #222; /* Slightly lighter black for hover */
+}
+
+/* Logo inside badge */
+.tech-logo {
+  width: 20px; /* Fixed logo size */
+  height: 20px;
+  object-fit: contain; /* Keep the logo proportions intact */
+}
+
+/* Text inside badge */
+.tech-name {
+  color: #fff; /* White text */
+  font-size: 0.875rem; /* Slightly smaller font */
+  font-weight: 600; /* Semi-bold text */
+  font-family: "Inter", sans-serif; /* Modern sans-serif font */
+}
+/* Responsive Styles for Small Screens */
+@media (max-width: 768px) {
+  .cs-content-items {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    gap: 10px; /* Reduce spacing between items */
+  }
+
+  .cs-c-i-badge,
+  .cs-c-i-desc {
+    flex: unset; /* Reset flex properties */
+    width: 100%; /* Take full width of the container */
+    text-align: center; /* Center text for smaller screens */
+  }
+}

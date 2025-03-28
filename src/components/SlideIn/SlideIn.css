@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Boldonse:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Boldonse&family=Cinzel:wght@400..900&family=Outfit&family=Righteous&display=swap");
+.slide-in-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 25vh;
+  background-color: rgba(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+.slide-in-h1,
+.slide-in-h2 {
+  font-weight: 400;
+  font-style: normal;
+  position: relative;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: transform 1s ease-out, opacity 1s ease-out;
+  color: #000; /* Text color */
+  text-shadow: 0 0 5px #fff, /* Inner glow */ 0 0 10px #000,
+    /* Middle glow */ 0 0 10px #2a2492, /* Outer purple glow */ 0 0 10px #ff00ff,
+    0 0 5px #ff00ff, 0 0 5px #ff00ff, 0 0 5px #2a2492; /* Further outer glow */
+  font-size: 2em; /* Adjust as needed */
+  font-weight: bold; /* Optional for bolder text */
+}
+
+.slide-in-container.visible .slide-in-h1,
+.slide-in-container.visible .slide-in-h2 {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.slide-in-h1 {
+  font-family: "Boldonse";
+
+  font-size: calc(3rem + 1vw); /* Responsive font size */
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.slide-in-h2 {
+  font-size: calc(2rem + 0.5vw); /* Responsive font size */
+  color: #ccc;
+  font-family: "Righteous", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+/* Style for the video background */
+.slidein-background {
+  position: relative;
+  width: 100%;
+  height: 30vh; /* Full viewport height */
+  overflow: hidden;
+}
+
+.slidein-background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the entire background */
+  transform: translate(-50%, -50%);
+  z-index: -1; /* Places the video behind the content */
+}
+
+/* Slide-in container */
+.slide-in-container {
+  position: relative;
+  z-index: 1; /* Ensures content is above the video */
+  color: #fff; /* Adjust text color for visibility */
+  text-align: center;
+  padding: 2rem;
+}
+
+.slide-in-h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.slide-in-h2 {
+  font-size: 2rem;
+  margin: 0;
+  font-weight: lighter;
+}
+.background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  z-index: 0; /* Sits between the video and the content */
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+  .slide-in-h1 {
+    font-size: calc(2rem + 1vw);
+  }
+
+  .slide-in-h2 {
+    font-size: calc(1.5rem + 0.5vw);
+  }
+}
+
+@media (max-width: 480px) {
+  .slide-in-h1 {
+    font-size: 2rem;
+  }
+
+  .slide-in-h2 {
+    font-size: 1.5rem;
+  }
+}

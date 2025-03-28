@@ -1,0 +1,17 @@
+* {
+  margin: 0; /* Removes default margin */
+  padding: 0; /* Removes default padding */
+  box-sizing: border-box; /* Ensures consistent box model behavior */
+}
+body,
+html {
+  width: 100%; /* Full width of the viewport */
+  height: 100%; /* Full height of the viewport */
+  overflow: auto; /* Prevents horizontal scrolling */
+}
+/* Hide scrollbar for Webkit-based browsers (Chrome, Safari, etc.) */
+body::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar in Internet Explorer 10+ */
+}
