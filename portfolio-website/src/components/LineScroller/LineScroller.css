@@ -1,0 +1,25 @@
+.line-scroller-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 5px; /* Width of the line */
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.1
+  ); /* Optional: A subtle background for the line container */
+  z-index: 9999;
+}
+
+.line-scroller {
+  width: 50%;
+  height: 0; /* Starts at 0 height */
+  background: linear-gradient(
+    180deg,
+    rgba(29, 123, 160, 0.4) 0%,
+    rgb(0, 217, 255) 100%
+  ); /* Color gradient for the trail */
+  transition: height 0.1s ease-out; /* Smooth transition effect */
+}

@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Boldonse&family=Cinzel:wght@400..900&family=Nabla&family=Outfit&family=Righteous&display=swap");
+/* Container */
+.image-and-name-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* Ensures elements wrap on small screens */
+  opacity: 0; /* Initially hidden */
+  transform: translateY(100%); /* Positioned off-screen */
+  animation: slideUp 10s ease-out forwards; /* Trigger animation */
+  height: 90vh; /* Full viewport height */
+  width: 100%; /* Full viewport width */
+}
+
+/* Slide-up animation */
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Round image styling */
+.round-image {
+  border-radius: 50%;
+  width: 10vw; /* Scales relative to viewport width */
+  height: 10vw; /* Scales relative to viewport width */
+  margin-right: 1vw; /* Adjust spacing */
+}
+
+/* White line styling */
+.white-line {
+  width: 5vw;
+  max-width: 10vw; /* Adjust maximum size */
+  height: 10vw; /* Maintains aspect ratio */
+}
+
+/* Text styling */
+.iandnclass {
+  font-family: "Nabla", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "EDPT" 100, "EHLT" 12;
+  font-size: 4vw; /* Scales relative to viewport width */
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin: 1vw 0; /* Adjust spacing */
+}
