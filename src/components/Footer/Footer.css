@@ -1,19 +1,23 @@
-/* Basic footer styling */
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Boldonse&family=Cinzel:wght@400..900&family=Metal+Mania&family=Nabla:EDPT@104&family=Outfit&family=Quintessential&family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Boldonse&family=Bruno+Ace+SC&family=Cinzel:wght@400..900&family=Metal+Mania&family=Nabla:EDPT@104&family=Outfit&family=Quintessential&family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Boldonse&family=Bruno+Ace+SC&family=Cinzel:wght@400..900&family=Metal+Mania&family=Nabla:EDPT@104&family=Outfit&family=Quintessential&family=Righteous&family=Unbounded:wght@200..900&display=swap");
+
+/* Footer Component Styling */
 .footer {
-  background-color: rgba(0, 0, 0, 0); /* Dark background for contrast */
-  color: #ffffff; /* Light text color for readability */
+  background-color: rgba(0, 0, 0, 0);
+  color: #ffffff;
   padding: 10px 0;
   text-align: center;
   font-family: Outfit;
-  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.9); /* Add top shadow */
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.9);
   position: sticky;
   height: 0%;
 }
-/* Copyright section */
+
 .fcopyright {
   margin-bottom: 10px;
   font-size: 1rem;
-  color: #bfbfbf; /* Light grey for subtle contrast */
+  color: #bfbfbf;
 }
 
 .footer-content {
@@ -24,7 +28,6 @@
   align-items: center;
 }
 
-/* Details section layout */
 .details {
   display: flex;
   justify-content: space-between;
@@ -32,41 +35,37 @@
   width: 100%;
   max-width: 1000px;
   padding: 20px;
-  border-top: 1px solid #444; /* Top border for separation */
+  border-top: 1px solid #444;
 }
 
-/* finfo and froute are separated by a line */
 .line {
   width: 12px;
-  background-color: black; /* Light grey color for the line */
+  background-color: black;
   height: 100%;
   margin: 0 20px;
 }
 
-/* finfo section */
 .finfo p {
   margin: 3px 0;
-  color: #d3d3d3; /* Lighter color for text */
+  color: #d3d3d3;
   font-size: 19px;
 }
 
-/* froute section */
 .froute p {
   margin: 5px 0;
 }
 
 .froute a {
-  color: #e7e7e7; /* Light grey for links */
+  color: #e7e7e7;
   text-decoration: none;
   font-size: 16px;
   transition: color 0.3s ease;
 }
 
 .froute a:hover {
-  color: #f5a623; /* Highlight on hover */
+  color: #f5a623;
 }
 
-/* Make the layout responsive */
 @media (max-width: 768px) {
   .details {
     flex-direction: column;
@@ -75,7 +74,7 @@
 
   .line {
     width: 80%;
-    height: 1px; /* Horizontal line for mobile layout */
+    height: 1px;
     margin: 20px 0;
   }
 }

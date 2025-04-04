@@ -7,11 +7,11 @@ body,
 html {
   width: 100%; /* Full width of the viewport */
   height: 100%; /* Full height of the viewport */
-  overflow: auto; /* Prevents horizontal scrolling */
+  overflow: auto; /* Hides overflow content */
 }
 /* Hide scrollbar for Webkit-based browsers (Chrome, Safari, etc.) */
 body::-webkit-scrollbar {
-  display: none; /* Hide scrollbar */
-  scrollbar-width: none; /* Hide scrollbar in Firefox */
-  -ms-overflow-style: none; /* Hide scrollbar in Internet Explorer 10+ */
+  display: none;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }

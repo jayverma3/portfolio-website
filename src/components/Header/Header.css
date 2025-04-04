@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Boldonse&family=Bruno+Ace+SC&family=Cinzel:wght@400..900&family=Metal+Mania&family=Nabla:EDPT@104&family=Outfit&family=Quintessential&family=Righteous&family=Unbounded:wght@200..900&display=swap");
 .header {
   display: flex;
   justify-content: center;
@@ -9,6 +10,10 @@
   z-index: 1;
   padding: 1%;
   top: 0;
+  font-family: "Unbounded", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
 }
 
 .main-div {

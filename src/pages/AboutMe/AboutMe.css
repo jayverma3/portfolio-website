@@ -1,11 +1,15 @@
-.home {
+.aboutme {
   position: relative;
   min-height: 100vh; /* Full viewport height */
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Space between header, main content, and footer */
+  justify-content: center; /* Space between header, main content, and footer */
 }
-
+.journey {
+  display: flex;
+  flex-direction: column; /* Stack cards vertically */
+  align-items: center; /* Center cards horizontally */
+}
 /* Background video styles */
 .home-background-video {
   position: fixed;

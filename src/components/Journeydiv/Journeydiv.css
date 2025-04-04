@@ -1,0 +1,136 @@
+.journey-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 0px solid rgb(255, 255, 255);
+  height: auto;
+  overflow: auto;
+  width: 90%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.journey-components {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 0px solid rgb(255, 255, 255);
+  width: 100%;
+  height: auto;
+  overflow-y: auto;
+  word-wrap: break-word;
+  box-sizing: border-box;
+}
+
+.journey-columns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  gap: 20px;
+  color: #fff;
+  font-family: "Righteous", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: clamp(0.85rem, 2.5vw, 1rem);
+  border: 0px solid rgba(255, 255, 255, 1);
+  box-sizing: border-box;
+}
+
+.journey-rows {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 20px;
+  gap: 20px;
+  color: #fff;
+  font-family: "Righteous", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: clamp(0.85rem, 2.5vw, 1rem);
+  border: 0px solid rgba(255, 255, 255, 1);
+  box-sizing: border-box;
+}
+
+.journey-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  background: transparent;
+  border: 0px solid rgb(255, 255, 255);
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.journey-section-year,
+.journey-section-Study,
+.journey-section-field {
+  font-size: clamp(0.85rem, 2.5vw, 1rem);
+  text-align: center;
+  box-sizing: border-box;
+  border: 0px solid rgb(255, 255, 255);
+}
+
+.jh2 {
+  font-size: clamp(1rem, 4vw, 1.5rem);
+  color: #fff;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8), 0 0 5px #fff, 0 0 10px #ff00ff;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  text-align: center;
+}
+
+.jp {
+  font-size: clamp(0.85rem, 2.5vw, 1rem);
+  color: #ccc;
+  line-height: 1.6;
+  text-align: center;
+  word-break: break-word;
+}
+
+@media (max-width: 480px) {
+  .journey-container {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .journey-rows {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .journey-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .journey-section-year,
+  .journey-section-Study,
+  .journey-section-field {
+    width: 100%;
+  }
+
+  .jh2 {
+    font-size: clamp(1rem, 5vw, 1.2rem);
+  }
+
+  .jp {
+    font-size: clamp(0.8rem, 3vw, 1rem);
+  }
+}

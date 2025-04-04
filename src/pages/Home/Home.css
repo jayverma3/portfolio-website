@@ -10,10 +10,14 @@
   display: flex;
   align-items: center; /* Center vertically */
   justify-content: center; /* Center horizontally */
-  height: 100vh; /* Full viewport height for the hian section */
-  margin: 0 auto; /* Center horizontally on the page */
 }
 .hupc {
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  height: auto; /* Full viewport height for the hian section */
+}
+.hsh {
   display: flex;
   align-items: center; /* Center vertically */
   justify-content: center; /* Center horizontally */

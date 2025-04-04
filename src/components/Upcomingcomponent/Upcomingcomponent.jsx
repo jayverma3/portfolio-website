@@ -2,6 +2,25 @@ import React, { useEffect } from "react";
 import "./Upcomingcomponent.css";
 import hacker from "../../assets/gptimages/hoodie_shop.webp";
 import reactlogo from "../../assets/logos_pngs/react.png";
+import mongodblogo from "../../assets/logos_pngs/mongodb.png";
+import htmllogo from "../../assets/logos_pngs/html.png";
+import csslogo from "../../assets/logos_pngs/css3.png";
+import vitelogo from "../../assets/logos_pngs/Vite.js.png";
+import expresslogo from "../../assets/logos_pngs/Express.png";
+import nextjslogo from "../../assets/logos_pngs/Next.js.png";
+import PHP from "../../assets/logos_pngs/PHP.png";
+import P from "../PinkIcon/PinkIcon";
+import S from "../StarIcon/StarIcon";
+const techStack = [
+  { logo: reactlogo, name: "React" },
+  { logo: mongodblogo, name: "MongoDB" },
+  { logo: htmllogo, name: "HTML5" },
+  { logo: csslogo, name: "CSS" },
+  { logo: vitelogo, name: "Vite" },
+  { logo: expresslogo, name: "Express" },
+  { logo: nextjslogo, name: "Next.js" },
+  { logo: PHP, name: "PHP" },
+];
 
 const Upcomingcomponent = () => {
   useEffect(() => {
@@ -59,38 +78,72 @@ const Upcomingcomponent = () => {
         <div className="case-studies">
           {[...Array(1)].map((_, index) => (
             <div className="cs-card" key={index}>
-              <div className="cs-image">
-                <img src={hacker} alt={`Case Study ${index + 1}`} />
+              <div className="cs-image-container">
+                <div className="cs-image">
+                  <img src={hacker} alt={`Case Study ${index + 1}`} />
+                </div>
               </div>
               <div className="cs-content">
                 <div className="div-title">
-                  <h3 className="cs-title">
-                    Upcoming Project <span className="icon">🌟</span>
+                  <h3 className="h3-title">
+                    <span className="icon">˙⋆✮</span> Upcoming Project
+                    <span className="icon">✮⋆˙</span>
                   </h3>
                 </div>
-                <div className="cs-content-items">
-                  <div className="cs-c-i-desc">
-                    <p className="cs-description">
-                      <h3 className="desc-h3">Ecommerce Website</h3>
-                      <br />
-                      Welcome to [Brand Name], your ultimate destination for
-                      premium hoodies and t-shirts that redefine style, comfort,
-                      and individuality. Our collection is designed for
-                      trendsetters and creatives who value high-quality
-                      craftsmanship, timeless designs, and an eco-friendly
-                      approach to fashion.
+                <div className="cs-badge-title">
+                  <p className="cs-p">About The Project ℹ️</p>
+                </div>
+                <div className="cs-c-i-desc">
+                  <p className="cs-description star-text-wrapper">
+                    <br />
+                    <S />
+                    <p className="cs-text">
+                      Welcome to Hoodiez, your ultimate destination for premium
+                      hoodies and t-shirts that redefine style, comfort, and
+                      individuality. Our collection is designed for trendsetters
+                      and creatives who value high-quality craftsmanship,
+                      timeless designs, and an eco-friendly approach to fashion.
                     </p>
-                  </div>
-                  <div className="cs-c-i-badge">
-                    <div className="tech-badge">
+                    <br />
+                  </p>
+
+                  <p className="cs-badge-title star-text-wrapper">
+                    <S />
+                    <p className="cs-text">
+                      <br />
+                      About the Tech ℹ️
+                    </p>
+                    <br />
+                  </p>
+                  <p className="cs-description">
+                    <P /> React & Vite & Html & CSS used to make the frontend of
+                    the website
+                    <br />
+                    <P /> Express.js is used for the backend framework to handle
+                    server-side logic
+                    <br />
+                    <P /> PHP as a middleware to send data to MongoDB
+                    <br />
+                    <P /> MongoDB is used as the database to store user data
+                    <br />
+                    <P /> 3D models of hoodies and t-shirts are available
+                    <br />
+                    <P /> Error-free transactions and smooth checkout processes,
+                    every single time.
+                  </p>
+                </div>
+                <p className="cs-badge-title">Tech Used☄️</p>
+                <div className="cs-c-i-badge">
+                  {techStack.map(({ logo, name }, index) => (
+                    <div className="tech-badge" key={index}>
                       <img
-                        src={reactlogo}
-                        alt="React Logo"
+                        src={logo}
+                        alt={`${name} Logo`}
                         className="tech-logo"
                       />
-                      <span className="tech-name">React</span>
+                      <span className="tech-name">{name}</span>
                     </div>
-                  </div>
+                  ))}
                 </div>
               </div>
             </div>
