@@ -86,12 +86,35 @@ const Upcomingcomponent = () => {
               <div className="cs-content">
                 <div className="div-title">
                   <h3 className="h3-title">
-                    <span className="icon">˙⋆✮</span> Upcoming Project
-                    <span className="icon">✮⋆˙</span>
+                    <span className="icon">
+                      <S />
+                    </span>
+                    Upcoming Project
+                    <span className="icon">
+                      <S />
+                    </span>
                   </h3>
                 </div>
                 <div className="cs-badge-title">
-                  <p className="cs-p">About The Project ℹ️</p>
+                  <p className="cs-p">
+                    About The Project{" "}
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#ec4899" // Tailwind pink-500
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="info-icon"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <line x1="12" y1="16" x2="12" y2="12" />
+                      <circle cx="12" cy="8" r="1" />
+                    </svg>
+                  </p>
                 </div>
                 <div className="cs-c-i-desc">
                   <p className="cs-description star-text-wrapper">
@@ -111,7 +134,23 @@ const Upcomingcomponent = () => {
                     <S />
                     <p className="cs-text">
                       <br />
-                      About the Tech ℹ️
+                      About the Tech{" "}
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="#ec4899" // Tailwind pink-500
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="info-icon"
+                      >
+                        <circle cx="12" cy="12" r="10" />
+                        <line x1="12" y1="16" x2="12" y2="12" />
+                        <circle cx="12" cy="8" r="1" />
+                      </svg>
                     </p>
                     <br />
                   </p>

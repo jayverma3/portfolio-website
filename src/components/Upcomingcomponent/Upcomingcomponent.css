@@ -112,6 +112,8 @@
 }
 .cs-p {
   padding: 20px;
+  -webkit-text-stroke: 1px #000000; /* Black border around text */
+  text-stroke: 1px #000000; /* Standard, may not work in all browsers */
 }
 .cs-content:hover {
   transform: translateY(-5px);
@@ -229,4 +231,13 @@
   font-size: 0.95rem;
   color: #374151;
   line-height: 0;
+}
+.info-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  stroke: #ec4899;
+  background-color: rgba(236, 72, 154, 0);
+  border-radius: 9999px;
+  padding: 0.25rem;
+  flex-shrink: 0;
 }
