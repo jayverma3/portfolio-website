@@ -1,106 +1,141 @@
-@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Boldonse&family=Bruno+Ace+SC&family=Cinzel:wght@400..900&family=Metal+Mania&family=Nabla:EDPT@104&family=Outfit&family=Quintessential&family=Righteous&family=Unbounded:wght@200..900&display=swap");
-.header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(94, 49, 49, 0); /* Black background */
-  height: 100%;
-  position: relative;
-  width: 100vw;
-  z-index: 1;
-  padding: 1%;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+
+.header-container-v2 {
+  position: fixed;
   top: 0;
-  font-family: "Unbounded", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 15px 0;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
 }
 
-.main-div {
+.header-container-v2.scrolled {
+  background: rgba(10, 10, 20, 0.8);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.header-content-v2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 80%;
-  height: 100%;
-  background-color: transparent; /* Semi-transparent background */
-  border: 1px solid rgba(255, 255, 255, 0.1); /* White border */
-  border-radius: 50px; /* Rounded corners */
-  padding: 10px 20px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px); /* Frosted glass effect */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.hlogo {
+.logo-image-v2 {
+  height: 40px;
+}
+
+.nav-v2 {
   display: flex;
   align-items: center;
-  color: #fff;
-  font-weight: bold;
-  font-size: 1.2rem;
-  text-decoration: none;
 }
 
-.hlogo img {
-  height: 40px;
-  margin-right: 10px;
-}
-.nav-list {
+.nav-list-v2 {
   display: flex;
+  align-items: center;
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 15px;
-  transition: all 0.3s ease;
-  background-color: rgba(0, 0, 0, 0);
-  border-radius: 20px;
+  gap: 30px;
 }
 
-.nav-item a {
-  color: #fff;
+.nav-item-v2 a {
+  color: #e0e0e0;
   text-decoration: none;
-  font-size: 1rem;
-  padding: 8px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.nav-item-v2 a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #e94560;
+  transition: width 0.3s ease;
+}
+
+.nav-item-v2 a:hover::after {
+  width: 100%;
+}
+
+.hire-me-btn {
+  background: #e94560;
+  color: white;
+  padding: 10px 20px;
   border-radius: 20px;
-  background: transparent;
+  text-decoration: none;
+  font-weight: 600;
   transition: all 0.3s ease;
 }
 
-.nav-item a:hover {
-  background: rgba(255, 255, 255, 0.2); /* Slight highlight effect */
-  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2); /* Glow effect */
-  color: #fff;
+.hire-me-btn:hover {
+  background: #d43d51;
+  box-shadow: 0 0 10px #e94560;
 }
 
-.hamburger {
-  display: none; /* Hidden by default, visible in smaller screens */
-  flex-direction: column;
+.hamburger-menu-v2 {
+  display: none;
   cursor: pointer;
+  z-index: 1001;
 }
 
-.hamburger-line {
+.hamburger-menu-v2 .line {
   width: 25px;
   height: 3px;
   background-color: #fff;
-  margin: 3px 0;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+.line1-open {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.line2-open {
+  opacity: 0;
+}
+.line3-open {
+  transform: rotate(45deg) translate(-5px, -6px);
 }
 
 @media (max-width: 768px) {
-  .nav-list {
-    display: none;
+  .hamburger-menu-v2 {
+    display: block;
+  }
+
+  .nav-v2 {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background: rgba(10, 10, 20, 0.95);
+    backdrop-filter: blur(10px);
     flex-direction: column;
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    background: rgba(0, 0, 0, 0.8);
-    border-radius: 10px;
-    padding: 10px 20px;
-    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    transition: left 0.4s ease;
   }
 
-  .nav-list.open {
-    display: flex;
+  .nav-v2.is-open {
+    left: 0;
   }
 
-  .hamburger {
-    display: flex;
+  .nav-list-v2 {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .nav-item-v2 a {
+    font-size: 24px;
   }
 }

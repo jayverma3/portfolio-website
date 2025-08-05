@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import "./LineScroller.css";
 
 const LineScroller = () => {
@@ -18,12 +19,20 @@ const LineScroller = () => {
   }, []);
 
   return (
-    <div className="line-scroller-container">
-      <div
-        className="line-scroller"
-        style={{ height: `${scrollHeight}%` }}
-      ></div>
-    </div>
+    console.log("LineScroller rendered"),
+    (
+      <div className="line-scroller-container">
+        <motion.div
+          className="line-scroller"
+          style={{ height: `${scrollHeight}%` }}
+          animate={{
+            opacity: [0.8, 1, 0.8],
+            boxShadow: ["0 0 5px #0ff", "0 0 10px #0ff", "0 0 5px #0ff"],
+          }}
+          transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+        />
+      </div>
+    )
   );
 };
 
